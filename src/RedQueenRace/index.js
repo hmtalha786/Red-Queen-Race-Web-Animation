@@ -73,6 +73,15 @@ export const RedQueenRace = () => {
 		background2Movement.getAnimation().playbackRate = playbackrateBG;
 	};
 
+	const setInterval = () => {
+		/* Set decay */
+		if (playbackrateRQ > 0.4) {
+			playbackrateRQ *= 0.9;
+			redQueen_alice.getAnimation().playbackRate = playbackrateRQ;
+		}
+		adjustBackgroundPlayback();
+	};
+
 	useEffect(() => {
 		const fganimation = foreground1Movement.getAnimation();
 		fganimation.currentTime = fganimation.effect.getTiming().duration / 2;
@@ -80,15 +89,7 @@ export const RedQueenRace = () => {
 		const bganimation = background1Movement.getAnimation();
 		bganimation.currentTime = bganimation.effect.getTiming().duration / 2;
 
-		setInterval(() => {
-			/* Set decay */
-			if (playbackrateRQ > 0.4) {
-				playbackrateRQ *= 0.9;
-				redQueen_alice.getAnimation().playbackRate = playbackrateRQ;
-			}
-			adjustBackgroundPlayback();
-		}, 3000);
-
+		setInterval(setInterval(),3000);
 		document.addEventListener("click", () => {
 			playbackrateRQ *= 1.1;
 			redQueen_alice.getAnimation().playbackRate = playbackrateRQ;
