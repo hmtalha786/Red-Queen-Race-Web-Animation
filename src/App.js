@@ -1,11 +1,12 @@
-import './App.css';
+import React from "react";
+import { RedQueenRace } from "./RedQueenRace";
 
 function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  );
+	return (
+		<div>
+			<RedQueenRace />
+		</div>
+	);
 }
 
 export default App;
