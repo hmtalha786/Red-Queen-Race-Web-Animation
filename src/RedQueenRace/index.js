@@ -90,6 +90,7 @@ export const RedQueenRace = () => {
 		bganimation.currentTime = bganimation.effect.getTiming().duration / 2;
 
 		setInterval(setInterval(),3000);
+		
 		document.addEventListener("click", () => {
 			playbackrateRQ *= 1.1;
 			redQueen_alice.getAnimation().playbackRate = playbackrateRQ;
