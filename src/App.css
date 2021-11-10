@@ -1,4 +1,4 @@
-.yay {
+.box {
   border: 1vmin solid hsl(143, 55%, 55%);
   width: 5vmin;
   height: 5vmin;
@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
 }
+
 body {
   min-height: 100vh;
   display: flex;
@@ -14,14 +15,17 @@ body {
   align-items: center;
   overflow: hidden;
   background: hsl(231, 35%, 8%);
-  font-family: system-ui, 'Segoe UI', -apple-system, sans-serif;
+  font-family: system-ui, "Segoe UI", -apple-system, sans-serif;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 aside {
-  --guide: hsla(303, 85%, 55%, .4);
+  --guide: hsla(303, 85%, 55%, 0.4);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,8 +35,9 @@ aside {
   max-height: 1.6rem;
 }
 
-aside::before, aside::after {
-  content: '';
+aside::before,
+aside::after {
+  content: "";
   position: absolute;
   top: 0;
   width: 40vmin;
@@ -41,34 +46,146 @@ aside::before, aside::after {
 }
 aside::before {
   --guide: hsl(43, 85%, 55%);
-  --guide-a: hsla(43, 85%, 55%, .4);
+  --guide-a: hsla(43, 85%, 55%, 0.4);
   left: 0;
-  background:
-    linear-gradient(to right, transparent 2.5vmin, var(--guide) 2.5vmin, var(--guide) calc(2.5vmin + .1rem), transparent calc(2.5vmin + .1rem)),
-    linear-gradient(to right, transparent 7.5vmin, var(--guide) 7.5vmin, var(--guide) calc(7.5vmin + .1rem), transparent calc(7.5vmin + .1rem)),
-    linear-gradient(to right, transparent 12.5vmin, var(--guide) 12.5vmin, var(--guide) calc(12.5vmin + .1rem), transparent calc(12.5vmin + .1rem)),
-    linear-gradient(to right, transparent 17.5vmin, var(--guide) 17.5vmin, var(--guide) calc(17.5vmin + .1rem), transparent calc(17.5vmin + .1rem)),
-    linear-gradient(to right, transparent 22.5vmin, var(--guide) 22.5vmin, var(--guide) calc(22.5vmin + .1rem), transparent calc(22.5vmin + .1rem)),
-    linear-gradient(to right, transparent 27.5vmin, var(--guide) 27.5vmin, var(--guide) calc(27.5vmin + .1rem), transparent calc(27.5vmin + .1rem)),
-    linear-gradient(to right, transparent 32.5vmin, var(--guide) 32.5vmin, var(--guide) calc(32.5vmin + .1rem), transparent calc(32.5vmin + .1rem)),
-    linear-gradient(to right, transparent 37.5vmin, var(--guide) 37.5vmin, var(--guide) calc(37.5vmin + .1rem), transparent calc(37.5vmin + .1rem)),
-    linear-gradient(to bottom, transparent 45%, var(--guide-a) 45%, var(--guide-a) 55%, transparent 55%);
+  background: linear-gradient(
+      to right,
+      transparent 2.5vmin,
+      var(--guide) 2.5vmin,
+      var(--guide) calc(2.5vmin + 0.1rem),
+      transparent calc(2.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 7.5vmin,
+      var(--guide) 7.5vmin,
+      var(--guide) calc(7.5vmin + 0.1rem),
+      transparent calc(7.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 12.5vmin,
+      var(--guide) 12.5vmin,
+      var(--guide) calc(12.5vmin + 0.1rem),
+      transparent calc(12.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 17.5vmin,
+      var(--guide) 17.5vmin,
+      var(--guide) calc(17.5vmin + 0.1rem),
+      transparent calc(17.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 22.5vmin,
+      var(--guide) 22.5vmin,
+      var(--guide) calc(22.5vmin + 0.1rem),
+      transparent calc(22.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 27.5vmin,
+      var(--guide) 27.5vmin,
+      var(--guide) calc(27.5vmin + 0.1rem),
+      transparent calc(27.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 32.5vmin,
+      var(--guide) 32.5vmin,
+      var(--guide) calc(32.5vmin + 0.1rem),
+      transparent calc(32.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 37.5vmin,
+      var(--guide) 37.5vmin,
+      var(--guide) calc(37.5vmin + 0.1rem),
+      transparent calc(37.5vmin + 0.1rem)
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      var(--guide-a) 45%,
+      var(--guide-a) 55%,
+      transparent 55%
+    );
 }
 aside::after {
   --guide: hsl(303, 85%, 55%);
-  --guide-a: hsla(303, 85%, 55%, .4);
+  --guide-a: hsla(303, 85%, 55%, 0.4);
   right: 0;
-  background:
-    linear-gradient(to right, hsl(183, 85%, 55%) 0rem, hsl(183, 85%, 55%) .2rem, transparent .2rem),
-    linear-gradient(to right, transparent 5vmin, var(--guide) 5vmin, var(--guide) calc(5vmin + .2rem), transparent calc(5vmin + .2rem)),
-    linear-gradient(to right, transparent 10vmin, var(--guide) 10vmin, var(--guide) calc(10vmin + .2rem), transparent calc(10vmin + .2rem)),
-    linear-gradient(to right, transparent 15vmin, var(--guide) 15vmin, var(--guide) calc(15vmin + .2rem), transparent calc(15vmin + .2rem)),
-    linear-gradient(to right, transparent 20vmin, var(--guide) 20vmin, var(--guide) calc(20vmin + .2rem), transparent calc(20vmin + .2rem)),
-    linear-gradient(to right, transparent 25vmin, var(--guide) 25vmin, var(--guide) calc(25vmin + .2rem), transparent calc(25vmin + .2rem)),
-    linear-gradient(to right, transparent 30vmin, var(--guide) 30vmin, var(--guide) calc(30vmin + .2rem), transparent calc(30vmin + .2rem)),
-    linear-gradient(to right, transparent 35vmin, var(--guide) 35vmin, var(--guide) calc(35vmin + .2rem), transparent calc(35vmin + .2rem)),
-    linear-gradient(to right, transparent 0vmin, transparent calc(40vmin - .2rem), var(--guide) calc(40vmin - .2rem), var(--guide) 40vmin, transparent 40vmin),
-    linear-gradient(to bottom, transparent 45%, var(--guide-a) 45%, var(--guide-a) 55%, transparent 55%);
+  background: linear-gradient(
+      to right,
+      hsl(183, 85%, 55%) 0rem,
+      hsl(183, 85%, 55%) 0.2rem,
+      transparent 0.2rem
+    ),
+    linear-gradient(
+      to right,
+      transparent 5vmin,
+      var(--guide) 5vmin,
+      var(--guide) calc(5vmin + 0.2rem),
+      transparent calc(5vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 10vmin,
+      var(--guide) 10vmin,
+      var(--guide) calc(10vmin + 0.2rem),
+      transparent calc(10vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 15vmin,
+      var(--guide) 15vmin,
+      var(--guide) calc(15vmin + 0.2rem),
+      transparent calc(15vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 20vmin,
+      var(--guide) 20vmin,
+      var(--guide) calc(20vmin + 0.2rem),
+      transparent calc(20vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 25vmin,
+      var(--guide) 25vmin,
+      var(--guide) calc(25vmin + 0.2rem),
+      transparent calc(25vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 30vmin,
+      var(--guide) 30vmin,
+      var(--guide) calc(30vmin + 0.2rem),
+      transparent calc(30vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 35vmin,
+      var(--guide) 35vmin,
+      var(--guide) calc(35vmin + 0.2rem),
+      transparent calc(35vmin + 0.2rem)
+    ),
+    linear-gradient(
+      to right,
+      transparent 0vmin,
+      transparent calc(40vmin - 0.2rem),
+      var(--guide) calc(40vmin - 0.2rem),
+      var(--guide) 40vmin,
+      transparent 40vmin
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      var(--guide-a) 45%,
+      var(--guide-a) 55%,
+      transparent 55%
+    );
 }
 
 footer {
@@ -82,7 +199,7 @@ footer {
   font-size: 1.2rem;
 }
 footer p {
-  margin: .8rem 0;
+  margin: 0.8rem 0;
   line-height: 1.35;
 }
 footer div {
@@ -94,14 +211,8 @@ code {
   font-family: monospace;
 }
 
-button {
-  display: none;
-}
 .supports-composite-add button {
   display: inline-block;
-  margin: .5rem;
-  padding: .6rem 1rem;
-}
-.supports-composite-add #message {
-  display: none;
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
 }
